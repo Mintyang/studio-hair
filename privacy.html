@@ -3,68 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>隱私權政策</title>
+<title>髮帳 - 隱私權政策</title>
 <style>
 body { 
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
-    padding: 6px; 
-    line-height: 1; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+    padding: 20px; 
+    line-height: 1.6; 
     color: #333; 
     font-size: 16px; 
+    max-width: 800px;
+    margin: 0 auto;
 }
-h1, h2 { 
-    color: #3d432f; 
-    font-size: 18px; 
+h1 { 
+    color: #1a1645; 
+    font-size: 24px; 
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
 }
-ol, ul { 
-    margin-left: 10px; 
+h2 { 
+    color: #3b3480; 
+    font-size: 20px; 
+    margin-top: 25px;
+}
+ul { 
+    margin-left: 20px; 
 }
 li { 
-    margin-bottom: 12px; 
+    margin-bottom: 10px; 
+}
+.google-disclosure {
+    background-color: #f8f9ff;
+    border-left: 4px solid #4285f4;
+    padding: 15px;
+    margin: 20px 0;
+}
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #777;
+    text-align: center;
 }
 </style>
 </head>
 <body>
-<h1>隱私權政策</h1>
+<h1>髮帳 (HairBook) 隱私權政策</h1>
+<p>最近更新日期：2026年2月3日</p>
+
 <ol>
 <li>
-<h2>資料收集</h2>
+<h2>資料收集與來源</h2>
 <p>我們在提供服務時，會收集以下用戶資料：</p>
 <ul>
-<li>基本帳號資訊（姓名、Email、電話等）</li>
+<li>基本帳號資訊（姓名、Email、來自 Google/LINE 的第三方登入識別碼）</li>
 <li>預約紀錄與服務偏好</li>
-<li>使用行為與操作紀錄（用於改善服務）</li>
 <li>照片或影像檔（用於服務紀錄與預約管理）</li>
-<li>使用行為分析資料（透過 Firebase Analytics 收集）</li>
-<li>顧客管理資料（由會員自行輸入，如顧客姓名、聯絡方式、備註等）</li>
+<li>使用行為分析資料（透過 Firebase Analytics 收集，不含個資）</li>
+<li><strong>Google 日曆資料：</strong> 若您授權同步功能，我們將存取您的 Google 日曆事件資訊。</li>
 </ul>
-<p>這些資料僅用於提供預約管理、帳務統計、個人化服務，以及改善使用者體驗。</p>
 </li>
+
+<li class="google-disclosure">
+<h2>Google 用戶數據專屬聲明 (Google API Disclosure)</h2>
+<p>針對透過 Google API 取得的資訊，髮帳 承諾遵守以下規範：</p>
+<ul>
+<li><strong>數據使用：</strong> 我們僅存取您的 Google 日曆以實現「自動同步預約行程」功能。我們不會將這些資料用於任何其他目的。</li>
+<li><strong>有限使用 (Limited Use)：</strong> 髮帳 對從 Google API 接收資訊的使用與轉移，均遵循 <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API 服務用戶數據政策</a>，包括其中的「有限使用」要求。</li>
+<li><strong>數據分享與披露：</strong> 我們<strong>不會</strong>將您的 Google 用戶數據分享、轉移或披露給任何第三方，除非是為了提供或改進本應用的預約功能、或是為了遵守法律要求。我們絕對不會將您的 Google 數據用於廣告投放、出售給第三方，或用於信貸評估。</li>
+</ul>
+</li>
+
 <li>
 <h2>資料加密與保護</h2>
 <p>為保障用戶資料安全，我們採取以下措施：</p>
 <ul>
-<li>敏感個人資料（帳號密碼、Email、電話等）在伺服器端進行 AES-256-CBC 加密儲存</li>
-<li>照片與影像檔上傳至 Cloudflare R2，由 R2 提供伺服器端加密保護</li>
-<li>本地推播使用必要資訊通知用戶，推播資料不包含敏感個資</li>
-<li>Firebase Analytics 收集的使用行為資料不含敏感個資</li>
-<li>系統僅授權程式或管理人員可透過服務端程式存取資料</li>
+<li>敏感個人資料於伺服器端進行 AES-256-CBC 加密儲存。</li>
+<li>影像檔案儲存於 Cloudflare R2，並具備伺服器端加密保護。</li>
+<li>系統僅授權必要之程式或受訓管理人員存取相關資料。</li>
 </ul>
 </li>
+
 <li>
-<h2>用戶權益</h2>
-<p>用戶可隨時查詢、更新或刪除自己或客戶的個人資料，包括顧客資料與照片。</p>
-<p>用戶可選擇是否提供特定資訊，但部分資料為服務運作必要。</p>
+<h2>用戶權益與資料刪除</h2>
+<p>用戶可隨時透過 App 查詢、更新或要求刪除個人資料。當用戶要求刪除帳號時，我們將於合理時間內從主資料庫中清除所有關聯資料（包括已同步之 Google 日曆緩存資訊）。</p>
 </li>
-<li>
-<h2>資料保留與刪除</h2>
-<p>系統僅保留用戶資料於服務期間及法規要求期限。</p>
-<p>用戶要求刪除資料時，我們將於合理時間內從資料庫與備份中清除。刪除後的資料將無法復原，請用戶自行確認。</p>
-</li>
+
 <li>
 <h2>條款更新</h2>
-<p>隱私權政策如有更新，我們會在 App 內通知用戶，用戶須再次確認同意最新版本方可繼續使用服務。</p>
+<p>隱私權政策如有重大更新，我們會在 App 內通知用戶。繼續使用服務即表示您同意更新後的條款。</p>
 </li>
 </ol>
+
+<footer>
+    <p>© 2026 髮帳 (HairBook) 版權所有</p>
+</footer>
 </body>
 </html>
